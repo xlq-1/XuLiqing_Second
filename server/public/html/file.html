@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label>请选择文件</label>
+            <input type="file" id="file">
+        </div>
+    </div>
+    <script type="text/javascript">
+        //获取文件选择控件
+        var file = document.getElementById('file');
+        // 为文件选择控件添加onchange事件，用户选择文件时触发
+        file.onchange = function() {
+            console.log(this.files[0]);
+            var formData = new FormData();
+            // 将用户选择的文件追加到formData表单对象中
+            formData.append('attrName', this.files[0]);
+            var xhr = new XMLHttpRequest();
+            // 对ajax对象进行配置
+            xhr.open('post', 'http://localhost:8080/user/upload');
+            // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            // 发送ajax请求
+            xhr.send(formData);
+            // 监听服务器端给客户端的响应
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    // 显示服务器端返回的数据
+                    console.log(xhr.responseText);
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

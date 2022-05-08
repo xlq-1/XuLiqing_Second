@@ -1,0 +1,578 @@
+    /* 这里是个人中心模块 */
+    
+    .person_center,
+    .other_person_center {
+        display: none;
+    }
+    
+    .person_center_header,
+    .other_center_header {
+        position: fixed;
+        top: 0;
+        width: 400px;
+        margin: 0 auto;
+        height: 250px;
+        background-color: #fff;
+        z-index: 9999;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .person_center_top,
+    .other_person_center_top {
+        position: relative;
+        width: 400px;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #696969;
+    }
+    
+    .icon_logout::before {
+        content: "\e914";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+    }
+    
+    .other_person_center_return::before {
+        content: "\e905";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+        font-size: 28px;
+    }
+    
+    .icon_share::after {
+        content: "\e912";
+        font-family: "icomoon";
+        position: absolute;
+        right: 20px;
+    }
+    /* 个人信息模块 */
+    
+    .person_center_middle,
+    .other_person_center_middle {
+        position: relative;
+        width: 100%;
+        height: 170px;
+        padding-top: 15px;
+        padding-left: 15px;
+    }
+    
+    .person_center_middle .avatar,
+    .other_avatar {
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 50px;
+        background-color: #eaeaea;
+    }
+    
+    .person_center_middle .avatar input {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .person_center_middle .avatar img,
+    .other_user_avatar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+    
+    .person_center_middle .my_name,
+    .other_name {
+        float: left;
+        margin-left: 20px;
+        height: 100px;
+        line-height: 100px;
+        font-size: 20px;
+        color: #696969;
+    }
+    
+    .person_center_middle .my_data,
+    .other_data {
+        position: absolute;
+        bottom: 0;
+        width: 365px;
+        height: 50px;
+    }
+    /* 笔记收藏点赞导航栏 */
+    
+    .my_data_detailed,
+    .other_data_detailed {
+        float: left;
+        width: 200px;
+        height: 50px;
+        color: #a9a9a9;
+    }
+    
+    .my_data_detailed>div,
+    .other_data_detailed>div {
+        float: left;
+        text-align: center;
+        margin-right: 15px;
+    }
+    /* 编辑资料 */
+    
+    .edit,
+    .send_msg {
+        position: absolute;
+        right: 40px;
+        bottom: 10px;
+        float: left;
+        width: 90px;
+        height: 30px;
+        color: #696969;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #a9a9a9;
+        border-radius: 4px;
+    }
+    /* 笔记收藏点赞导航栏 */
+    
+    .person_center_bottom,
+    .other_person_center_bottom {
+        display: flex;
+        justify-content: space-around;
+        height: 40px;
+        line-height: 40px;
+        color: #696969;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .person_center_bottom span,
+    .other_center_bottom span {
+        line-height: 40px;
+    }
+    /* 这里是关注,粉丝列表 */
+    
+    .follow_person,
+    .fans_person,
+    .other_follow_person,
+    .other_fans_person {
+        display: none;
+    }
+    
+    .follow_person_top,
+    .fans_person_top,
+    .other_follow_person_top,
+    .other_fans_person_top {
+        position: relative;
+        width: 380px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .follow_return::before,
+    .fans_return::before,
+    .other_follow_return::before,
+    .other_fans_return::before {
+        content: "\e905";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+        font-size: 28px;
+    }
+    
+    .follow_detailed li,
+    .fans_detailed li,
+    .other_follow_detailed li,
+    .other_fans_detailed li {
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .follow_avatar,
+    .fans_avatar,
+    .other_follow_avatar,
+    .other_fans_avatar {
+        float: left;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        margin-right: 15px;
+        margin-top: 10px;
+    }
+    
+    .follow_nickname,
+    .fans_nickname,
+    .other_follow_nickname,
+    .other_fans_nickname {
+        float: left;
+        height: 60px;
+        line-height: 60px;
+    }
+    
+    .follow_left,
+    .fans_left,
+    .other_follow_left,
+    .other_fans_left {
+        height: 60px;
+    }
+    
+    .follow_right,
+    .fans_right,
+    .other_follow_right,
+    .other_fans_right {
+        padding: 8px 5px;
+        background-color: #e40613;
+        color: #fff;
+        height: 27px;
+        line-height: 8px;
+        margin-top: 15px;
+        border-radius: 5px;
+    }
+    /* 这里是获赞和收藏列表 */
+    
+    .my_like,
+    .other_like {
+        position: relative;
+        padding-top: 80px;
+        display: none;
+        height: 669px;
+    }
+    
+    .my_like_top,
+    .other_like_top {
+        position: fixed;
+        top: 0;
+        width: 400px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #fff;
+        z-index: 9999;
+    }
+    
+    .like_return::before,
+    .other_like_return::before {
+        content: "\e905";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+        font-size: 28px;
+    }
+    
+    .my_like_type_box,
+    .other_like_type_box {
+        position: fixed;
+        top: 40px;
+        width: 400px;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #eaeaea;
+        background-color: #fff;
+        z-index: 9999;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .liked_box,
+    .started_box,
+    .other_liked_box,
+    .other_started_box {
+        width: 400px;
+    }
+    
+    .liked_box>div,
+    .started_box>div,
+    .other_liked_box>div,
+    .other_started_box>div {
+        position: relative;
+        width: 400px;
+        height: 60px;
+        background-color: #fff;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .liked_box .left,
+    .started_box .left,
+    .other_liked_box .left,
+    .other_started_box .left {
+        float: left;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #a3a3a3;
+        margin: 10px 15px 0 20px;
+    }
+    
+    .liked_box .like_my_article_left,
+    .started_box .star_my_article_left,
+    .other_liked_box .like_other_article_left,
+    .other_started_box .star_other_article_left {
+        float: left;
+        line-height: 30px;
+    }
+    
+    .liked_box .right,
+    .started_box .right,
+    .other_liked_box .right,
+    .other_started_box .right {
+        float: right;
+        width: 40px;
+        height: 40px;
+        background-color: #a3a3a3;
+        margin-top: 10px;
+        margin-right: 50px;
+    }
+    
+    .liked_box .right::after,
+    .started_box .right::after,
+    .other_liked_box .right::after,
+    .other_started_box .right::after {
+        content: '\e906';
+        font-family: 'icomoon';
+        font-size: 22px;
+        color: #a3a3a3;
+        position: absolute;
+        right: 20px;
+        top: 17px;
+    }
+    /* 这里是编辑资料列表 */
+    
+    .my_edit {
+        display: none;
+    }
+    
+    .my_edit_top {
+        position: relative;
+        width: 380px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    
+    .my_edit_return::before {
+        content: "\e905";
+        font-family: "icomoon";
+        position: absolute;
+        left: 0;
+        font-size: 28px;
+    }
+    
+    .edit_avatar_box {
+        position: relative;
+        height: 170px;
+    }
+    
+    .edit_avatar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: #eaeaea;
+        /* 使用定位使头像水平垂直居中 */
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 50%;
+        margin-top: -50px;
+    }
+    
+    .edit_my_avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .my_edit .information {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        line-height: 40px;
+        border-top: 1px solid #eaeaea;
+        padding-right: 15px;
+    }
+    
+    .my_edit .information::after {
+        position: absolute;
+        right: 0;
+        content: "\e906";
+        font-family: "icomoon";
+    }
+    
+    .my_edit .background_pic {
+        height: 60px;
+        line-height: 60px;
+        border-top: 1px solid #eaeaea;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .my_edit .detailed_background_pic {
+        width: 45px;
+        height: 45px;
+        background-color: #eaeaea;
+        margin-top: 7.5px;
+        border-radius: 4px;
+    }
+    /* 这里是点击各个信息进入的编辑页面 */
+    
+    .upload {
+        display: none;
+    }
+    
+    .upload_top {
+        height: 40px;
+        line-height: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .upload input {
+        width: 350px;
+        height: 40px;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding-left: 10px;
+        border-radius: 4px;
+    }
+    /* 退出登录 */
+    
+    .logout {
+        display: none;
+        width: 300px;
+        height: 150px;
+        background-color: #fff;
+        box-shadow: 0 0 10px 0 #a3a3a3;
+        border-radius: 5px;
+        position: absolute;
+        left: 42px;
+        top: 270px;
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    .ask {
+        font-size: 20px;
+        color: #e40613;
+    }
+    
+    .logout_button {
+        width: 300px;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 70%;
+    }
+    
+    .logout_button div {
+        padding: 5px 8px;
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+    }
+    /* 这里是笔记,点赞，收藏文章 */
+    
+    .my_node,
+    .other_node,
+    .my_star_article,
+    .my_like_article,
+    .other_star_article,
+    .other_like_article {
+        column-count: 2;
+        column-gap: 10px;
+        margin-top: 260px;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        overflow: hidden;
+    }
+    
+    .my_star_article,
+    .my_like_article,
+    .other_star_article,
+    .other_like_article {
+        display: none;
+    }
+    
+    .other_node,
+    .other_star_article,
+    .other_like_article {
+        margin-top: 15px;
+    }
+    
+    .my_article,
+    .other_article {
+        -webkit-column-break-inside: avoid;
+        float: left;
+        position: relative;
+        width: 185px;
+        /* height: 300px; */
+        border: 1px solid #eaeaea;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 0 #a3a3a3;
+        padding-bottom: 60px;
+        margin-bottom: 5px;
+        overflow: hidden;
+    }
+    
+    .my_node_bottom,
+    .other_node_bottom {
+        position: absolute;
+        bottom: 0;
+        width: 185px;
+        height: 60px;
+        padding-left: 6px;
+    }
+    
+    .delete_note {
+        font-size: 10px;
+        float: right;
+    }
+    
+    .article_img,
+    .other_article_img {
+        width: 185px;
+    }
+    
+    .article_left,
+    .other_article_left {
+        float: left;
+        line-height: 35px;
+    }
+    
+    .article_left img,
+    .other_article_left img {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        margin-right: 15px;
+        margin-top: 2px;
+    }
+    
+    .article_left>div,
+    .other_article_left>div {
+        float: left;
+    }
+    
+    .article_right,
+    .other_article_right {
+        float: right;
+        margin-right: 5px;
+        line-height: 35px;
+    }
+    
+    .article_right::before,
+    .other_article_right::before {
+        content: "\e916";
+        font-family: "icomoon";
+    }

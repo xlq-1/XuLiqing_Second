@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?rg8jsu');
+    src: url('../fonts/icomoon.eot?rg8jsu#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?rg8jsu') format('truetype'), url('../fonts/icomoon.woff?rg8jsu') format('woff'), url('../fonts/icomoon.svg?rg8jsu#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 版心宽度及居中 */
+
+.w {
+    width: 380px;
+    margin: 0 auto;
+}
+
+.b {
+    font-weight: bold;
+}
+
+
+/* 去除列表默认样式 */
+
+li {
+    list-style: none;
+}
+
+
+/* 去除a标签下划线 */
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+
+/* 伪元素清除浮动 */
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/* 兼容浏览器ie6-7 */
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 点击显示下划线 */
+
+.active_line {
+    color: #e40613;
+    border-bottom: 3px solid #e40613;
+}
+
+
+/* 点击改变颜色 */
+
+.active_color {
+    color: #e40613;
+}

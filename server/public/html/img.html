@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input type="file" id="file">
+    <div id="box"></div>
+
+
+
+</body>
+<script type="text/javascript">
+    var box = document.getElementById('box');
+    // 获取文件控件
+    var file = document.getElementById('file')
+        // 为文件选择控件添加onchanges事件
+        // 在用户选择文件时触发
+    file.onchange = function() {
+        // 创建空的FormData表单对象
+        var formData = new FormData();
+        // 将用户选择文件追加到fromData表单对象中
+        formData.append('attrName', this.files[0]);
+        // 创建Ajax对象
+        var xhr = new XMLHttpRequest();
+        // 对ajax对象进行配置
+        xhr.open('post', 'http://localhost:8080/upload');
+        // 发送ajax请求
+        xhr.send(formData);
+        // 监听服务器端响应给客户端的数据
+        xhr.onload = function() {
+            // 如果服务器端返回的http码类型为200
+            // 说明请求成功
+            if (xhr.status == 200) {
+                // 将服务器端返回的数据显示在控制台中
+                console.log(xhr.responseText);
+                var img = document.createElement('img');
+                img.src = xhr.responseText;
+                img.style.width = "50px";
+                img.style.height = "50px";
+                img.onload = function() {
+                    box.appendChild(img);
+                }
+            }
+        }
+    }
+</script>
+
+</html>

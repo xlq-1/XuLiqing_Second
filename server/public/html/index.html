@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小红书</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/my_msg.css">
+    <link rel="stylesheet" href="../css/person_center.css">
+
+</head>
+
+<body>
+
+    <!-- 这里是登录界面 -->
+
+    <div id="login_box">
+        <div class="logo w"></div>
+        <form id="login" name="login">
+            <input class="username w" type="text" name="username" placeholder="用户名">
+            <input class="password w" type="password" name="password" placeholder="密码">
+            <input class="login_btn" type="button" value="登录"></input>
+        </form>
+        <div class="login_pic"></div>
+    </div>
+
+    <!-- 这里是主界面 -->
+
+    <div class="main w">
+
+        <!-- 这里是首页模块 -->
+
+        <div class="homepage">
+            <div class="homepage_top">
+                <div class="add"></div>
+                <div class="homepage_header">首页</div>
+                <div class="search"></div>
+            </div>
+
+
+            <!-- 这里是导航栏 -->
+
+            <nav>
+                <ul class="w">
+                    <li>
+                        <a href="javascript:;" class="tag active_line" id="tag_recommend">推荐</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_travel">旅行</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_food">美食</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_fashion">时尚</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_cosmetics">彩妆</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_efficient">高效</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="tag" id="tag_skin">护肤</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 推荐页面内容 -->
+            <div class="articles recommend">
+
+            </div>
+            <!-- 旅游页面内容 -->
+            <div class="articles travel">
+
+            </div>
+            <!-- 美食页面内容 -->
+            <div class="articles food">
+
+            </div>
+            <!-- 时尚页面内容 -->
+            <div class="articles fashion">
+
+            </div>
+            <!-- 彩妆页面内容 -->
+            <div class="articles cosmetics">
+
+            </div>
+            <!-- 高效页面内容 -->
+            <div class="articles efficient">
+
+            </div>
+            <!-- 护肤页面内容 -->
+            <div class="articles skin">
+
+            </div>
+
+        </div>
+
+        <!-- 这里是我的消息模块 -->
+
+        <div class="my_msg">
+            <div class="my_msg_header">
+                <div class="my_msg_left"></div>
+                <div class="my_msg_middle">消息</div>
+                <div class="my_msg_right">创建聊天</div>
+            </div>
+            <div class="my_msg_nav">
+                <span class="my_msg_like">赞和收藏</span>
+                <span class="my_msg_follow">新增关注</span>
+                <span class="my_msg_comment">评论和@</span>
+            </div>
+        </div>
+
+        <!-- 这里是个人中心模块 -->
+
+        <div class="person_center">
+            <div class="person_center_header">
+                <!-- 头部功能键 -->
+                <div class="person_center_top">
+                    <div class="icon_logout"></div>
+                    <div class="icon_share"></div>
+                </div>
+                <!-- 个人信息模块 -->
+                <div class="person_center_middle">
+                    <div class="avatar">
+                        <img src="" class="user_avatar">
+                        <input type="file" id="my_avatar">
+                        <div id="avatar_box">点击上传头像</div>
+
+                    </div>
+                    <div class="my_name">用户名</div>
+                    <div class="my_data">
+                        <div class="my_data_detailed">
+                            <div class="follow_box active_color">
+                                <div class="follow_number">0</div>
+                                <div class="follow">关注</div>
+                            </div>
+                            <div class="fans_box">
+                                <div class="fans_number">0</div>
+                                <div class="fans">粉丝</div>
+                            </div>
+                            <div class="like_box">
+                                <div class="like_number">0</div>
+                                <div class="like">点赞和收藏</div>
+                            </div>
+                        </div>
+                        <div class="edit">编辑资料</div>
+                    </div>
+                </div>
+                <!-- 笔记收藏点赞导航栏 -->
+                <div class="person_center_bottom">
+                    <span class="note active_line">笔记</span>
+                    <span class="collect">收藏</span>
+                    <span class="liked">赞过</span>
+
+                </div>
+                <!-- 退出登录 -->
+                <div class="logout">
+                    <div class="ask">是否确定退出登录</div>
+                    <div class="logout_button">
+                        <div class="cancle_logout">取消</div>
+                        <div class="sure_logout">确定</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <!-- 我的文章 -->
+            <div class="my_node"></div>
+
+            <!-- 我收藏的文章 -->
+            <div class="my_star_article"></div>
+
+            <!-- 我赞过的文章 -->
+            <div class="my_like_article"></div>
+        </div>
+
+
+
+        <!-- 这里是页脚 -->
+        <footer>
+            <div class="icon_homepage active_color">首页</div>
+            <div class="icon_my_msg">我的消息</div>
+            <div class="icon_person_center">个人中心</div>
+        </footer>
+
+
+    </div>
+
+    <!-- 这里是发布文章页面 -->
+    <div class="upload_article w">
+        <div class="upload_article_top">
+            <div class="upload_article_return"></div>
+        </div>
+
+        <div class="add_pic">
+            <div>
+                <div class="my_add_pic">
+                    <input type="file" class="pic_upload">
+                </div>
+            </div>
+
+        </div>
+        <input type="text" class="my_title" placeholder="添加标题会有更多赞哦~">
+        <div class="content_box">
+            <textarea name="my_content" id="my_content" cols="30" rows="10" placeholder="添加正文"></textarea>
+            <div class="my_tag">#话题</div>
+        </div>
+        <div class="upload_my_node">发布笔记</div>
+        <div class="my_tag_box">
+            <input type="text" class="article_tag" placeholder="请输入要添加的tag">
+            <div class="tag_cancle">取消</div>
+            <div class="tag_sure">确定</div>
+        </div>
+    </div>
+
+
+    <!-- 这里是搜索界面 -->
+
+    <div class="search_main w">
+        <div class="search_fixed">
+            <div class="search_top">
+                <div class="search_return"></div>
+                <input type="text" class="input_search" placeholder="请输入搜索内容">
+                <button class="search_button">搜索</button>
+            </div>
+            <div class="search_type">
+                <div class="search_article active_line">文章</div>
+                <div class="search_user">用户</div>
+            </div>
+
+
+        </div>
+
+
+        <div class="article_detailed"></div>
+        <div class="user_detailed"></div>
+
+
+    </div>
+
+
+    <!-- 这里是文章详情页 -->
+    <div class="article_enter">
+        <div class="article_enter_top">
+            <div class="article_enter_return"></div>
+            <img src="" class="article_author_avatar">
+            <div class="article_enter_authorName"></div>
+            <div class="article_enter_follow">关注</div>
+            <div class="article_enter_share"></div>
+        </div>
+        <div class="article_enter_middle">
+            <div class="article_images_box">
+            </div>
+            <div class="span_box"></div>
+            <div class="article_enter_title"></div>
+            <div class="article_enter_content"></div>
+            <div class="article_enter_tag"></div>
+            <div class="article_enter_postDate"></div>
+            <div class="review_box">
+                <div class="review_num">共0条评论</div>
+                <img src="" class="article_enter_my_avatar">
+                <div class="say_something">说点什么吧,万一火了呢~</div>
+
+                <ul class="detailed_reviews">
+
+                </ul>
+            </div>
+        </div>
+        <div class="article_enter_bottom">
+            <div class="review_bottom">说点什么...</div>
+            <div class="like_bottom">0</div>
+            <div class="star_bottom">0</div>
+            <div class="all_review">0</div>
+        </div>
+    </div>
+
+    <!-- 发送评论 -->
+    <div class="write_my_review">
+        <div class="cancle_send"></div>
+        <div class="write_my_review_bottom">
+            <input type="text" id="input_my_review" placeholder="喜欢就给个评论支持一下~">
+            <div class="send_my_review">发送</div>
+        </div>
+    </div>
+    <!-- 回复他人评论  -->
+    <div class="reply_comment">
+        <div class="cancle_reply"></div>
+        <div class="reply_comment_bottom">
+            <input type="text" id="input_reply_comment" placeholder="回复">
+            <div class="send_reply_comment">回复</div>
+        </div>
+    </div>
+
+
+
+    <!-- 这里是我收到的评论 -->
+    <div class="my_comment">
+        <div class="my_comment_top">
+            <div class="my_comment_return"></div>
+            <div>收到的评论和@</div>
+        </div>
+        <div class="my_comment_box"></div>
+    </div>
+
+
+    <!-- 这里是关注列表 -->
+
+    <div class="follow_person w">
+        <div class="follow_person_top">
+            <div class="follow_return"></div>
+            <div>关注的人</div>
+        </div>
+        <div class="follow_detailed"></div>
+    </div>
+
+    <!-- 这里是粉丝列表 -->
+
+    <div class="fans_person w">
+        <div class="fans_person_top">
+            <div class="fans_return"></div>
+            <div>粉丝</div>
+        </div>
+        <div class="fans_detailed"></div>
+    </div>
+
+    <!-- 这里是获赞和收藏列表 -->
+
+    <div class="my_like">
+        <div class="my_like_top">
+            <div class="like_return"></div>
+            <div>获赞和收藏</div>
+        </div>
+        <div class="my_like_type_box">
+            <div class="type_liked active_line">获赞</div>
+            <div class="type_started">收藏</div>
+        </div>
+
+        <!-- 我的获赞页面 -->
+        <div class="liked_box">
+        </div>
+
+
+        <!-- 被收藏页面 -->
+        <div class="started_box"></div>
+    </div>
+
+
+
+
+    <!-- 这里是他人的关注列表 -->
+
+    <div class="other_follow_person w">
+        <div class="other_follow_person_top">
+            <div class="other_follow_return"></div>
+            <div>关注的人</div>
+        </div>
+        <div class="other_follow_detailed"></div>
+    </div>
+
+    <!-- 这里是他人的粉丝列表 -->
+
+    <div class="other_fans_person w">
+        <div class="other_fans_person_top">
+            <div class="other_fans_return"></div>
+            <div>粉丝</div>
+        </div>
+        <div class="other_fans_detailed"></div>
+    </div>
+
+    <!-- 这里是他人的获赞和收藏列表 -->
+
+    <div class="other_like">
+        <div class="other_like_top">
+            <div class="other_like_return"></div>
+            <div>获赞和收藏</div>
+        </div>
+        <div class="other_like_type_box">
+            <div class="other_type_liked active_line">获赞</div>
+            <div class="other_type_started">收藏</div>
+        </div>
+
+        <!-- 他人的的获赞页面 -->
+        <div class="other_liked_box">
+        </div>
+
+
+        <!-- 他人的被收藏页面 -->
+        <div class="other_started_box"></div>
+    </div>
+
+
+
+    <!-- 这里是编辑资料列表 -->
+
+    <div class="my_edit w">
+        <div class="my_edit_top">
+            <div class="my_edit_return"></div>
+            <div>编辑资料</div>
+        </div>
+        <div class="edit_avatar_box">
+            <div class="edit_avatar">
+                <img src="" class="edit_my_avatar">
+            </div>
+        </div>
+        <div class="information information_name">
+            <div class="edit_name">姓名</div>
+            <div class="detailed_name">啦啦啦</div>
+        </div>
+        <div class="information information_gender">
+            <div class="edit_gender">性别</div>
+            <div class="detailed_gender"></div>
+        </div>
+        <div class="information information_birthday">
+            <div class="edit_birthday">生日</div>
+            <div class="detailed_birthday"></div>
+        </div>
+        <div class="information information_area">
+            <div class="edit_area">地区</div>
+            <div class="detailed_area"></div>
+        </div>
+        <div class=" information information_description">
+            <div class="description">简介</div>
+            <div class="detailed_description"></div>
+        </div>
+        <div class="information background_pic">
+            <div>背景图</div>
+            <div class="detailed_background_pic"></div>
+        </div>
+    </div>
+
+    <!-- 这里是点击各个信息进入的编辑页面 -->
+    <div class="upload_name w upload">
+        <div class="upload_top w">
+            <div class="cancel">返回</div>
+            <div>编辑名字</div>
+            <div class="save_name">保存</div>
+        </div>
+        <input type="text" placeholder="添加名字" name="nickname" class="input_name">
+    </div>
+
+    <div class="upload_gender w upload">
+        <div class="upload_top w">
+            <div class="cancel">返回</div>
+            <div>编辑性别</div>
+            <div class="save_gender">保存</div>
+        </div>
+        <input type="text" placeholder="添加性别" name="gender" class="input_gender">
+    </div>
+
+    <div class="upload_birthday w upload">
+        <div class="upload_top w">
+            <div class="cancel">返回</div>
+            <div>编辑生日</div>
+            <div class="save_birthday">保存</div>
+        </div>
+        <input type="text" placeholder="添加生日" name="birthday" class="input_birthday">
+    </div>
+
+    <div class="upload_area w upload">
+        <div class="upload_top w">
+            <div class="cancel">返回</div>
+            <div>编辑地区</div>
+            <div class="save_area">保存</div>
+        </div>
+        <input type="text" placeholder="添加地区" name="area" class="input_area">
+    </div>
+
+
+    <div class="upload_description w upload">
+        <div class="upload_top w">
+            <div class="cancel">返回</div>
+            <div>编辑简介</div>
+            <div class="save_description">保存</div>
+        </div>
+        <input type="text" placeholder="添加简介" name="description" class="input_description">
+    </div>
+
+    <!-- 这里是他人中心模块 -->
+
+    <div class="other_person_center">
+        <div class="other_person_center_header">
+            <!-- 头部功能键 -->
+            <div class="other_person_center_top">
+                <div class="other_person_center_return"></div>
+            </div>
+            <!-- 个人信息模块 -->
+            <div class="other_person_center_middle">
+                <div class="other_avatar">
+                    <img src="" class="other_user_avatar">
+                </div>
+                <div class="other_name">用户名</div>
+                <div class="other_data">
+                    <div class="other_data_detailed">
+                        <div class="other_follow_box active_color">
+                            <div class="other_follow_number">0</div>
+                            <div class="others_follow">关注</div>
+                        </div>
+                        <div class="other_fans_box">
+                            <div class="other_fans_number">0</div>
+                            <div class="others_fans">粉丝</div>
+                        </div>
+                        <div class="other_like_box">
+                            <div class="other_like_number">0</div>
+                            <div class="others_like">点赞和收藏</div>
+                        </div>
+                    </div>
+                    <div class="send_msg">发消息</div>
+                </div>
+            </div>
+            <!-- 笔记收藏点赞导航栏 -->
+            <div class="other_person_center_bottom">
+                <span class="other_note active_line">笔记</span>
+                <span class="other_collect">收藏</span>
+                <span class="other_liked">赞过</span>
+            </div>
+
+        </div>
+        <!-- 他人的文章 -->
+        <div class="other_node"></div>
+        <div class="other_star_article"></div>
+        <div class="other_like_article"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="../js/ajax.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/my_msg.js"></script>
+    <script src="../js/person_center.js"></script>
+    <script src="../js/waterfall.js"></script>
+</body>
+
+</html>

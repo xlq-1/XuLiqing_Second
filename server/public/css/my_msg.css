@@ -1,0 +1,142 @@
+.my_msg {
+    display: none;
+}
+
+.my_msg_header {
+    height: 40px;
+    line-height: 40px;
+    color: #696969;
+}
+
+.my_msg_header .my_msg_left::before {
+    content: "\e905";
+    font-family: "icomoon";
+}
+
+.my_msg_header>div {
+    float: left;
+}
+
+.my_msg_header .my_msg_middle {
+    margin-left: 155px;
+}
+
+.my_msg_header .my_msg_right {
+    margin-left: 113px;
+}
+
+.my_msg_nav {
+    display: flex;
+    justify-content: space-around;
+    width: 380px;
+    height: 80px;
+    line-height: 110px;
+}
+
+.my_msg_nav span {
+    position: relative;
+}
+
+.my_msg_like::before {
+    content: "\e9da";
+    font-family: "icomoon";
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    color: #e40613;
+}
+
+.my_msg_follow::before {
+    content: "\e971";
+    font-family: "icomoon";
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    color: deepskyblue
+}
+
+.my_msg_comment::before {
+    content: "\e96d";
+    font-family: "icomoon";
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    color: chartreuse;
+}
+
+
+/* 我收到的评论界面 */
+
+.my_comment {
+    display: none;
+    position: relative;
+    width: 400px;
+    height: 669px;
+    padding-top: 40px;
+}
+
+.my_comment_top {
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.my_comment_return::before {
+    content: "\e905";
+    font-family: "icomoon";
+    position: absolute;
+    left: 0;
+    font-size: 28px;
+}
+
+.my_comment_box {
+    width: 400px;
+}
+
+.my_comment_box>div {
+    position: relative;
+    width: 400px;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.my_comment .left {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #a3a3a3;
+    margin: 10px 15px 0 20px;
+}
+
+.my_comment_box .my_comment_left {
+    float: left;
+    line-height: 30px;
+}
+
+.my_comment_box .right {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: #a3a3a3;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.my_comment_box::after {
+    content: '\e906';
+    font-family: 'icomoon';
+    font-size: 22px;
+    color: #a3a3a3;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+}
